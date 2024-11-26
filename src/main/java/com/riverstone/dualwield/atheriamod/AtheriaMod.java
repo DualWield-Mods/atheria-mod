@@ -1,6 +1,10 @@
-package com.riverstone.dualwield.atheriamc;
+package com.riverstone.dualwield.atheriamod;
 
 import com.mojang.logging.LogUtils;
+import com.riverstone.dualwield.atheriamod.block.ModBlocks;
+import com.riverstone.dualwield.atheriamod.block.entity.ModBlockEntities;
+import com.riverstone.dualwield.atheriamod.item.ModCreativeTabs;
+import com.riverstone.dualwield.atheriamod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -16,11 +20,18 @@ import org.slf4j.Logger;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(AtheriaMod.MOD_ID)
 public class AtheriaMod {
-    public static final String MOD_ID = "atheriamc";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final String MOD_ID = "atheriamod";
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public AtheriaMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+
+        ModCreativeTabs.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

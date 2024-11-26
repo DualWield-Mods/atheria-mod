@@ -1,6 +1,6 @@
-package com.riverstone.dualwield.atheriamc.datagen.model;
+package com.riverstone.dualwield.atheriamod.datagen.model;
 
-import com.riverstone.dualwield.atheriamc.AtheriaMod;
+import com.riverstone.dualwield.atheriamod.AtheriaMod;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

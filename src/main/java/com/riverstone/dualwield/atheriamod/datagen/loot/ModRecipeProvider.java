@@ -1,6 +1,6 @@
-package com.riverstone.dualwield.atheriamc.datagen.loot;
+package com.riverstone.dualwield.atheriamod.datagen.loot;
 
-import com.riverstone.dualwield.atheriamc.AtheriaMod;
+import com.riverstone.dualwield.atheriamod.AtheriaMod;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;

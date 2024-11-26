@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/aeon_forge_bottom",
+    "east": "minecraft:block/aeon_forge_side",
+    "north": "minecraft:block/aeon_forge_front",
+    "particle": "minecraft:block/aeon_forge_front",
+    "south": "minecraft:block/aeon_forge_side",
+    "up": "minecraft:block/aeon_forge_top",
+    "west": "minecraft:block/aeon_forge_front"
+  }
+}

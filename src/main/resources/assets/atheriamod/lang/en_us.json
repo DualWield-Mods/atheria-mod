@@ -1,0 +1,8 @@
+{
+  "block.atheriamod.aeon_forge": "Aeon Forge",
+
+  "tooltip.atheriamod.aeon_forge": "Advanced Crafting Table",
+  "tooltip.atheriamod.aeon_forge.shift_down": "Enables 5x5 Crafting",
+
+  "creative_tab.atheriamod.atheria_tab": "AtheriaMC"
+}

@@ -1,6 +1,6 @@
-package com.riverstone.dualwield.atheriamc.datagen.loot;
+package com.riverstone.dualwield.atheriamod.datagen.loot;
 
-import com.riverstone.dualwield.atheriamc.block.ModBlocks;
+import com.riverstone.dualwield.atheriamod.block.ModBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
@@ -22,7 +22,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-
+        this.dropSelf(ModBlocks.AEON_FORGE.get());
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block block, Item item) {

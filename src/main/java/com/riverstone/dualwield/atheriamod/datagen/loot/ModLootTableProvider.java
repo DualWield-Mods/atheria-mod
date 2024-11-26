@@ -1,4 +1,4 @@
-package com.riverstone.dualwield.atheriamc.datagen.loot;
+package com.riverstone.dualwield.atheriamod.datagen.loot;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;

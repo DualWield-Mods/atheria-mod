@@ -1,6 +1,6 @@
-package com.riverstone.dualwield.atheriamc.util;
+package com.riverstone.dualwield.atheriamod.util;
 
-import com.riverstone.dualwield.atheriamc.AtheriaMod;
+import com.riverstone.dualwield.atheriamod.AtheriaMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;

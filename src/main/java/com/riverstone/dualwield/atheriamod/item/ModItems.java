@@ -1,6 +1,6 @@
-package com.riverstone.dualwield.atheriamc.item;
+package com.riverstone.dualwield.atheriamod.item;
 
-import com.riverstone.dualwield.atheriamc.AtheriaMod;
+import com.riverstone.dualwield.atheriamod.AtheriaMod;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

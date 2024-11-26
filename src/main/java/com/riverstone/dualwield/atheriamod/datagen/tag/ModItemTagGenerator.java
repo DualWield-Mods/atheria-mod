@@ -1,6 +1,6 @@
-package com.riverstone.dualwield.atheriamc.datagen.tag;
+package com.riverstone.dualwield.atheriamod.datagen.tag;
 
-import com.riverstone.dualwield.atheriamc.AtheriaMod;
+import com.riverstone.dualwield.atheriamod.AtheriaMod;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;

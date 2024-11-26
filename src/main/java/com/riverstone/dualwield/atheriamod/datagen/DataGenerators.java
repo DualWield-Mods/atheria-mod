@@ -1,12 +1,12 @@
-package com.riverstone.dualwield.atheriamc.datagen;
+package com.riverstone.dualwield.atheriamod.datagen;
 
-import com.riverstone.dualwield.atheriamc.AtheriaMod;
-import com.riverstone.dualwield.atheriamc.datagen.loot.ModLootTableProvider;
-import com.riverstone.dualwield.atheriamc.datagen.loot.ModRecipeProvider;
-import com.riverstone.dualwield.atheriamc.datagen.model.ModBlockStateProvider;
-import com.riverstone.dualwield.atheriamc.datagen.model.ModItemModelProvider;
-import com.riverstone.dualwield.atheriamc.datagen.tag.ModBlockTagGenerator;
-import com.riverstone.dualwield.atheriamc.datagen.tag.ModItemTagGenerator;
+import com.riverstone.dualwield.atheriamod.AtheriaMod;
+import com.riverstone.dualwield.atheriamod.datagen.loot.ModLootTableProvider;
+import com.riverstone.dualwield.atheriamod.datagen.loot.ModRecipeProvider;
+import com.riverstone.dualwield.atheriamod.datagen.model.ModBlockStateProvider;
+import com.riverstone.dualwield.atheriamod.datagen.model.ModItemModelProvider;
+import com.riverstone.dualwield.atheriamod.datagen.tag.ModBlockTagGenerator;
+import com.riverstone.dualwield.atheriamod.datagen.tag.ModItemTagGenerator;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
