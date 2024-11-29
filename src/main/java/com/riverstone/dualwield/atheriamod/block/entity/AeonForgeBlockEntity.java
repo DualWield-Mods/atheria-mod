@@ -36,8 +36,35 @@ public class AeonForgeBlockEntity extends BlockEntity implements MenuProvider {
 
     private ItemStack result = null;
 
+    protected final ContainerData data;
+    private int progress = 0;
+    private int maxProgress = 100;
+
     public AeonForgeBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.AEON_FORGE_BE.get(), pPos, pBlockState);
+        this.data = new ContainerData() {
+            @Override
+            public int get(int pIndex) {
+                return switch (pIndex) {
+                    case 0 -> AeonForgeBlockEntity.this.progress;
+                    case 1 -> AeonForgeBlockEntity.this.maxProgress;
+                    default -> 0;
+                };
+            }
+
+            @Override
+            public void set(int pIndex, int pValue) {
+                switch (pIndex) {
+                    case 0 -> AeonForgeBlockEntity.this.progress = pValue;
+                    case 1 -> AeonForgeBlockEntity.this.maxProgress = pValue;
+                }
+            }
+
+            @Override
+            public int getCount() {
+                return 2;
+            }
+        };
     }
 
     @Override
@@ -81,17 +108,28 @@ public class AeonForgeBlockEntity extends BlockEntity implements MenuProvider {
 
     @Override
     protected void saveAdditional(CompoundTag pTag) {
-        pTag.put("inventory", itemHandler.serializeNBT());
+        pTag.put("aeon_forge.inventory", itemHandler.serializeNBT());
+        pTag.putInt("aeon_forge.progress", progress);
         super.saveAdditional(pTag);
     }
 
     @Override
     public void load(CompoundTag pTag) {
         super.load(pTag);
-        itemHandler.deserializeNBT(pTag.getCompound("inventory"));
+        itemHandler.deserializeNBT(pTag.getCompound("aeon_forge.inventory"));
+        progress = pTag.getInt("aeon_forge.progress");
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
+        if (hasRecipe()) {
+            increaseCraftingProgress();
+            updateRecipe();
+            setChanged(pLevel, pPos, pState);
 
+            if (hasProgressFinished()) {
+                craftItem();
+                resetProgress();
+            }
+        }
     }
 }
